@@ -1,0 +1,32 @@
+.AboutScreen {
+  margin-left: 10.9375%;
+  margin-right: 10.9375%;
+
+}
+@media only screen and (min-width: 769px) {
+  .AboutScreen {
+    height: 76.2vh;
+    
+    &_profile--wrapper {
+      width: 150%;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .AboutScreen {
+    .cta-content {
+      width: 91%;
+    }
+
+    &_profile--wrapper {
+      width: 66%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1557px) {
+  .AboutScreen {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}

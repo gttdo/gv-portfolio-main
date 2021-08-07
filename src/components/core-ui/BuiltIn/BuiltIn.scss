@@ -1,0 +1,33 @@
+.BuiltIn {
+  h4 {
+    
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+
+  h6 {
+    font-weight: 900;
+    font-size: 1.1rem;
+    text-decoration:underline;
+  }
+
+  h4, h6, p, li {
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  p, li {
+    font-size: 1rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 20.41px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  h4 {
+    font-size: 1.2rem;
+  }
+  }

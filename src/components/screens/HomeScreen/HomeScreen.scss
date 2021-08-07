@@ -1,0 +1,87 @@
+.HomeScreen {
+  margin-left: 10.9375%;
+  margin-right: 10.9375%;
+  
+  .cta-content {
+    width: 84%;
+  }
+
+  &_spotlight--wrapper {
+    border-radius: 30px;
+    margin-left: auto;
+    width: 90%;
+  }
+
+  .story_03--link-wrapper {
+    margin: 2.25rem auto;
+    text-align: center;
+  }
+
+  .story_04 {
+    iframe#iframe {
+      margin: auto;
+    }
+  }
+
+  .coming-soon-flag {
+    font-family: 'Maven Pro';
+    font-weight: 800;
+    position: absolute;
+    top: 28%;
+    left: 14%;
+    color: #333333;
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .md\:flex-row {
+    flex-direction: row!important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .HomeScreen {
+    margin-left: 0%;
+    margin-right: 0%;
+
+    &_spotlight--wrapper {
+      margin-right: auto;
+      width: 100%;
+    }
+
+    &_form--content {
+      margin-left: 8%;
+    }
+
+    .cta-content {
+      width: 84%;
+      margin: auto;
+    }
+
+    &_recent--wrapper {
+      overflow-x: auto;
+    }
+
+    &_recent {
+      flex: 0 0 auto;
+    }
+
+  }
+}
+
+@media only screen and (min-width: 1557px) {
+  .HomeScreen {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .HomeScreen {
+    .cta-content {
+      width: 90%;
+      margin: auto;
+    }
+  }
+}

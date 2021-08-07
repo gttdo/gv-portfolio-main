@@ -1,0 +1,152 @@
+
+.WorksScreen,
+.CaseStudyAMT,
+.CaseStudyBusUp {
+  margin-left: 10.9375%;
+  margin-right: 10.9375%;
+
+
+
+  p, li {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 25px;
+    width: 100%;
+    color: #333;
+  }
+p.story_03_copy {
+  background-color: #00A698;
+}
+
+  p.story_03_copy,
+  p.story_04_copy {
+  text-align: center;
+  }
+
+p.story_04_copy,
+ul.story_04_list {
+  background-color: #F16432;
+}
+
+  p.story_03_copy,
+  p.story_04_copy,
+  ul.story_04_list li{
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.125rem;
+    padding: 0.3rem 1.5rem;
+  }
+
+  ul.story_04_list {
+    min-height: 20rem;
+  }
+
+
+}
+
+
+
+
+
+
+@media only screen and (min-width: 1557px) {
+  .WorksScreen,
+  .CaseStudyAMT,
+  .CaseStudyBusUp {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .SubProcessContent {
+    .copy_content {
+      width: 90%;
+      margin-left: 2rem;
+    }
+  }
+
+  .Carousel_desktop {
+    margin-left: 0%;
+    margin-right: 0%;
+    &_recent--wrapper {
+      overflow-x: auto;
+    }
+
+    &_recent {
+      flex: 0 0 auto;
+
+      img {
+        max-width: none;
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .Carousel {
+    margin-left: 0%;
+    margin-right: 0%;
+
+    &_recent--wrapper {
+      overflow-x: auto;
+    }
+
+    &_recent {
+      flex: 0 0 auto;
+    }
+
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  
+}
+
+/*Bootstrap Override*/
+
+/*all fonts*/
+/*tabs */
+.nav-link,
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link,
+.accordion-button:not(.collapsed),
+.accordion-header,
+.accordion-body {
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 25px;
+  width: 100%;
+}
+
+.nav-link {
+  color: #333;
+}
+
+.nav-link:hover {
+  color: #e5e5e5;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  background-color: #333;
+  color: #fff;
+}
+
+/*accordion*/
+.accordion-button:not(.collapsed) {
+  background-color: #333;
+  color: #fff;
+}
+
+
+
+button.accordion-button:not(.collapsed)::after {
+  color: #fff!important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")!important;
+}

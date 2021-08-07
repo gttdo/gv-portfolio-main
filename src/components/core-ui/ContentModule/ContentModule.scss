@@ -1,0 +1,132 @@
+.ContentModule,
+.DetailedContentModule {
+  width: 84%;
+}
+
+.ContentModule,
+.DetailedContentModule,
+.ImageContentModule,
+.HeaderContentModule,
+.LayeredContentModule {
+  h1 {
+    color: #333;
+    font-size: 4rem;
+    font-family: 'Maven Pro', 'Roboto', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 56.25px;
+    width: 100%;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    color: #333;
+    font-size: 1.275rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-family: 'Maven Pro', 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+  }
+
+
+  span.highlight {
+    color: #FF3D4F;
+    font-size: 4rem;
+    font-family: 'Maven Pro', 'Roboto', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 56.25px;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+  }
+
+  p, li {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 25px;
+    width: 100%;
+    color: #333;
+  }
+
+  span {
+    text-transform: uppercase;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 16.41px;
+    font-style: normal;
+  }
+}
+
+.LayeredContentModule,
+.ImageContentModule {
+  hr {
+    border-color: #333;
+  }
+
+.LayeredContentModule {
+
+  &_image--wrapper {
+    img.LCM_image {
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+}
+
+@media only screen and (min-width: 769px) {
+  .LayeredContentModule,
+  .ImageContentModule {
+    .ImageOnRight {
+      flex-direction: row;
+
+      &_margin {
+        margin-left: auto;
+        right: 0;
+      }
+    }
+  
+    .ImageOnLeft {
+      flex-direction: row-reverse;
+
+      &_margin {
+        margin-right: auto;
+        left: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ContentModule{
+    margin: 2.25rem auto 0;
+  }
+
+  .DetailedContentModule {
+    margin-right: auto;
+  }
+
+  .ContentModule,
+  .DetailedContentModule,
+  .ImageContentModule,
+  .HeaderContentModule,
+  .LayeredContentModule {
+    h1, span.highlight {
+      font-size: 3rem;
+    }
+  }
+}
+
+

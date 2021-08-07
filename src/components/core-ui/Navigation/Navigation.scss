@@ -1,0 +1,238 @@
+.Navigation {
+  height: 3.4375rem;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+
+  padding-left: 11.9375%;
+  padding-right: 11.9375%;
+  margin-bottom: 5.3125rem;
+
+  .logo {
+    width: auto;
+    height: auto;
+  }
+
+  &-mobile {
+    right: 0;
+    top: 17%;
+  }
+
+  a{
+    color: inherit!important;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+  }
+
+  .isNavActive,
+  &_link:hover {
+    border-bottom: 1px solid #fffffe;
+    padding-bottom: 5px;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .Navigation {
+    margin-bottom: 3rem;
+  }
+
+  
+}
+
+@media only screen and (min-width: 1557px) {
+  .Navigation {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+.navigation {
+  display: none;
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    background-color: #333333;
+    height: 3rem;
+    width: 3rem;
+    position: fixed;
+    top: 0.5%;
+    right: 3%;
+    border-radius: 50%;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(0,0,0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+
+
+  &__background {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 1.5%;
+    right: 5%;
+    background-color: #333333;
+    z-index: 1000;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  &__nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  &__list {
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 300;
+      font-family: 'Montserrat', sans-serif;
+      padding: 1rem 2rem;
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        #ffffff 50%
+      );
+      background-size: 235%;
+      transition: all 0.4s;
+
+      span {
+        margin-right: 1.5rem;
+        display: inline-block;
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: #333333!important;
+      transform: translateX(1rem);
+    }
+  }
+
+  //FUNCTIONALITY
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+  }
+
+  //ICON
+  &__icon {
+    position: relative;
+    margin-top: 1.35rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 1.35rem;
+      height: 2px;
+      background-color: #eee;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.4rem;
+    }
+    &::after {
+      top: 0.45rem;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -0.4rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 0.45rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}
+
+.hideNav {
+  visibility: hidden;
+}
+
+.navigation_checkbox--li {
+  height: 5rem;
+  width: 10rem;
+}
+
+@media only screen and (max-width: 375px) {
+.navigation {
+  &__button {
+    right: 7%;
+  }
+
+  &__background {
+    right: 7%;
+  }
+}
+  
+
+}

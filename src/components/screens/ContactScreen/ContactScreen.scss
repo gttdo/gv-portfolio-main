@@ -1,0 +1,35 @@
+.ContactScreen {
+  margin-left: 10.9375%;
+  margin-right: 10.9375%;
+
+  .icon i {
+    color: #FF3D4F;
+  }
+
+  &_contact--form {
+    box-shadow: 0 0 8px rgba(51, 51, 51, 0.15);
+  }
+
+  &_input {
+    border-bottom: 1px solid rgba(0, 0, 0, .54);
+    line-height: 2;
+
+  }
+}
+
+@media only screen and (max-width: 768px) { 
+  .ContactScreen {
+
+    &_input {
+      line-height: 1;
+    }
+
+  }
+}
+
+@media only screen and (min-width: 1557px) {
+  .ContactScreen {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
