@@ -75,7 +75,7 @@ const HomeScreen = () => {
               <p className="text-center text-xl">An inventory management tool</p>
             </Link>
             <div className="story_03--link-wrapper">
-              <FixedButtonLink addClass="full-width md:regular-width md:mt-7" textContent="VIEW" variant="red" linkTo="/works/case-study-amt" />
+              <FixedButtonLink addClass="regular-width md:regular-width md:mt-7" textContent="VIEW" variant="red" linkTo="/works/case-study-amt" />
             </div>
           </div>
           <div className="md:mx-4 HomeScreen_recent relative">
@@ -84,7 +84,7 @@ const HomeScreen = () => {
             <p className="text-center text-xl opacity-30">Commuter app for schedules, routes and stops.</p>
             <div className="coming-soon-flag">COMING SOON</div>
             <div className="story_03--link-wrapper">
-              <FixedButtonLink disabled addClass="full-width md:regular-width" textContent="VIEW" variant="gray" linkTo="/works" />
+              <FixedButtonLink disabled addClass="regular-width md:regular-width disabled" textContent="VIEW" variant="gray" linkTo="/works" />
             </div>
           </div>
           <div className="md:ml-4 HomeScreen_recent relative">
@@ -93,7 +93,7 @@ const HomeScreen = () => {
             <p className="text-center text-xl opacity-30">An event planner application.</p>
             <div className="coming-soon-flag">COMING SOON</div>
             <div className="story_03--link-wrapper">
-              <FixedButtonLink disabled addClass="full-width md:regular-width md:mt-7" textContent="VIEW" variant="gray" linkTo="/works" />
+              <FixedButtonLink disabled addClass="regular-width md:regular-width md:mt-7 disabled" textContent="VIEW" variant="gray" linkTo="/works" />
             </div>
           </div>
         </div>

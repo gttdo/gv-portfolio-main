@@ -40,11 +40,12 @@ const WorksScreen = () => {
         addImage={BusUpThumbnail}
         headerContent="BusUp Mobile App"
         linkTo="/works/case-study-busup"
-        addButtonClass="regular-width md:regular-width"
+        addButtonClass="regular-width md:regular-width disabled"
         paragraphContent="A mobile app that provides real-time information for bus locations, bus schedules and directions for the daily bus traveller."
-        variant="red"
+        variant="gray"
         mobileClass="mb-10"
-        desktopClass="mb-8" />
+        desktopClass="mb-8"
+        disabled />
 
     </div>
   )
