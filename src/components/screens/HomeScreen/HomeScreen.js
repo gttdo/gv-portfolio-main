@@ -31,7 +31,7 @@ const HomeScreen = () => {
             topParagraphClasses="md:block"
             addParagraphContent=""
             secondParagraphClasses="hidden" />
-          <div className="cta-content flex flex-column justify-center md:flex-row ml-auto">
+          <div className="cta-content flex flex-column md:flex-row ml-auto">
             <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/13IFsArrqFIHCbD4-Yw88XhroAWRsdVdq/view?usp=sharing"><FixedButton addClass="mr-6 mb-4 md:mb-0 full-width md:regular-width" variant="red" textContent="VIEW CV" /></a>
 
             <FixedButtonLink addClass="full-width md:regular-width" variant="inverse" textContent="LEARN MORE" linkTo="/about" />
