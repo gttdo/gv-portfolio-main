@@ -14,3 +14,14 @@ a {
   color: inherit;
   
 }
+
+
+.modal-dialog {
+  max-width: 98%!important;
+}
+
+@media only screen and (max-width: 767px) {
+  .modal {
+    top: 8%!important;
+  }
+}

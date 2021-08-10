@@ -15,6 +15,7 @@ import Thumb03 from '../../../assets/works/localeyez_demo2.jpg';
 
 
 const HomeScreen = () => {
+
   return (
     <div className="HomeScreen">
       <div className="story_02 flex flex-row-reverse justify-between mb-28 md:flex-row ">
@@ -30,10 +31,10 @@ const HomeScreen = () => {
             topParagraphClasses="md:block"
             addParagraphContent=""
             secondParagraphClasses="hidden" />
-          <div className="cta-content flex ml-auto">
-            <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/13IFsArrqFIHCbD4-Yw88XhroAWRsdVdq/view?usp=sharing"><FixedButton addClass="mr-6" variant="red" textContent="VIEW CV" /></a>
+          <div className="cta-content flex flex-column justify-center md:flex-row ml-auto">
+            <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/13IFsArrqFIHCbD4-Yw88XhroAWRsdVdq/view?usp=sharing"><FixedButton addClass="mr-6 mb-4 md:mb-0 full-width md:regular-width" variant="red" textContent="VIEW CV" /></a>
 
-            <FixedButtonLink variant="inverse" textContent="LEARN MORE" linkTo="/about" />
+            <FixedButtonLink addClass="full-width md:regular-width" variant="inverse" textContent="LEARN MORE" linkTo="/about" />
           </div>
         </div>
       </div>
@@ -49,7 +50,7 @@ const HomeScreen = () => {
 
             paragraphContentClass="mb-4" />
           <div className="HomeScreen_form--content ">
-            <FixedButtonLink textContent="Let's Connect" variant="red" linkTo="/contact" />
+            <FixedButtonLink addClass="full-width md:regular-width" textContent="Let's Connect" variant="red" linkTo="/contact" />
 
           </div>
         </div>
@@ -63,8 +64,8 @@ const HomeScreen = () => {
 
       <div className="story_03">
         <ContentModule addClass="mb-9" headerContent="Projects" />
-        <div className="content flex flex-nowrap justify-evenly HomeScreen_recent--wrapper">
-          <div className="md:mr-4 HomeScreen_recent md:mb-8">
+        <div className="content flex flex-nowrap justify-between HomeScreen_recent--wrapper">
+          <div className="md:mr-4 HomeScreen_recent md:mb-8 md:relative">
             <Link to="/works/case-study-amt">
               <img className="md:m-auto md:w-full" src={Thumb01} alt="mobile app: asset management tool" />
               <p className="mt-8 text-center text-xl font-medium">Asset Management Tool</p>
@@ -72,20 +73,20 @@ const HomeScreen = () => {
             </Link>
           </div>
           <div className="md:mx-4 HomeScreen_recent relative">
-            <img className="md:m-auto md:w-full md:opacity-30" src={Thumb02} alt="mobile app: bus up application" />
-            <p className="mt-8 text-center text-xl font-medium md:opacity-30">Bus Up</p>
-            <p className="text-center text-xl md:opacity-30">Commuter app for schedules, routes and stops.</p>
-            <span className="coming-soon-flag">COMING SOON</span>
+            <img className="md:m-auto md:w-full opacity-30" src={Thumb02} alt="mobile app: bus up application" />
+            <p className="mt-8 text-center text-xl font-medium opacity-30">Bus Up</p>
+            <p className="text-center text-xl opacity-30">Commuter app for schedules, routes and stops.</p>
+            <div className="coming-soon-flag">COMING SOON</div>
           </div>
           <div className="md:ml-4 HomeScreen_recent relative">
-            <img className="md:m-auto md:w-full md:opacity-30" src={Thumb03} alt="mobile app: localeyez. Comming Soon." />
-            <p className="mt-8 text-center text-xl font-medium md:opacity-30">LocalEyez</p>
-            <p className="text-center text-xl md:opacity-30">An event planner application.</p>
-            <span className="coming-soon-flag">COMING SOON</span>
+            <img className="md:m-auto md:w-full opacity-30" src={Thumb03} alt="mobile app: localeyez. Comming Soon." />
+            <p className="mt-8 text-center text-xl font-medium opacity-30">LocalEyez</p>
+            <p className="text-center text-xl opacity-30">An event planner application.</p>
+            <div className="coming-soon-flag">COMING SOON</div>
           </div>
         </div>
         <div className="story_03--link-wrapper">
-          <FixedButtonLink textContent="VIEW ALL" variant="red" linkTo="/works" />
+          <FixedButtonLink addClass="full-width md:regular-width" textContent="VIEW ALL" variant="red" linkTo="/works" />
         </div>
       </div>
 

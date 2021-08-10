@@ -1,8 +1,9 @@
 .FixedButton,
 #ModalButton.ModalButton {
+
+  
   
   height: 3.125rem;
-  width: 10.6875rem;
   border-radius: 5px;
   line-height: 16.41px;
   font-size: 1rem;
@@ -26,6 +27,17 @@
   user-select: none;
 }
 
+
+
+.md\:regular-width {
+  width: 10.6875rem
+}
+
+
+.md\:full-width {
+  width: 100%;
+}
+
 #ModalButton.ModalButton,
 .red {
   background-color: #FF3D4F;
@@ -42,10 +54,21 @@
   color: #fff;
 }
 
+@media only screen and (max-width: 767px) {
+  .regular-width {
+    width: 9.6875rem;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 375px) {
 .FixedButton,
 #ModalButton.ModalButton {
-  width: 9.6875rem;
+
+  
   font-size: 0.85rem;
 }
   

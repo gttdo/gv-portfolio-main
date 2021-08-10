@@ -26,6 +26,7 @@ const WorksScreen = () => {
         desktopClass="mb-8"
         addImage={AMTThumbnail}
         headerContent="Asset Management Tool"
+        addButtonClass="regular-width md:regular-width"
         linkTo="/works/case-study-amt"
         paragraphContent="An effective way for businesses to manage their inventory and provide to employees a quick access to it."
         variant="red" />
@@ -39,6 +40,7 @@ const WorksScreen = () => {
         addImage={BusUpThumbnail}
         headerContent="BusUp Mobile App"
         linkTo="/works/case-study-busup"
+        addButtonClass="regular-width md:regular-width"
         paragraphContent="A mobile app that provides real-time information for bus locations, bus schedules and directions for the daily bus traveller."
         variant="red"
         mobileClass="mb-10"

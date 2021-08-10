@@ -1,16 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 import BuiltIn from '../../../../core-ui/BuiltIn/BuiltIn';
 
-import SWOTGraph from '../../../../../assets/works/AMT/SWOT_analysis.png';
+import SWOTGraph from '../../../../../assets/works/AMT/SWOTanalysis@4x.png';
 import SWOTGraphS from '../../../../../assets/works/AMT/SWOT_analysis_S.png';
 import UserPersonaWoman from '../../../../../assets/works/AMT/UserPerson_Woman.jpg';
 import UserPersonaWomanS from '../../../../../assets/works/AMT/UserPerson_Woman_S.png';
 import UserPersonaQuote from '../../../../../assets/works/AMT/UserPersona_Quote.png';
 import UserPersonaQuoteXL from '../../../../../assets/works/AMT/UserPersona_Quote_S.png';
-import CaseStudyProcess from '../../../../../assets/works/AMT/CaseStudy_Process.png';
+import CaseStudyProcess from '../../../../../assets/works/AMT/user_journey@4x.png';
 
 const Discover = () => {
+  const [showA, setShowA] = useState(false);
+  const [showB, setShowB] = useState(false);
+
+  const handleCloseA = () => setShowA(false);
+  const handleShowA = () => setShowA(true);
+
+  const handleCloseB = () => setShowB(false);
+  const handleShowB = () => setShowB(true);
   return (
     <>
       <div className="story_01 mb-4 md:mb-24">
@@ -27,6 +37,21 @@ const Discover = () => {
           />
           <img src={SWOTGraph} alt="Asset Panda: Strengths: Available across platforms. Weaknesses: Too complex. Lack onboarding. Opportunities: Applicable for any industry. Threats: Market Saturation. Fishbowl: Strengths: Support team. Notifications. Weaknesses: Non intuitive. Opportunities: Modern design trend. Threats: Competitors with similar features. Reftab: Strengths: Upload inventory. Weaknesses: Lack responsive design. Opportunities: High demand. Threats: Free demo." />
         </picture>
+        <div className="text-center"><Button id="ModalButton" className="ModalButton mt-8 mb-8" onClick={handleShowA}>
+          Enlarge Image
+        </Button></div>
+
+        <Modal show={showA} onHide={handleCloseA}>
+          <Modal.Header closeButton>
+            <Modal.Title>SWOT Graph</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <img className="" src={SWOTGraph} alt="Swot Graph" />
+          </Modal.Body>
+          <Modal.Footer>
+
+          </Modal.Footer>
+        </Modal>
       </div>
 
       <div className="story_02 mb-4 md:mb-24">
@@ -112,8 +137,23 @@ const Discover = () => {
       </div>
 
       <div className="story_04">
-        <div className="hidden md:inline-block">
+        <div className="hidden md:inline-block md:mb-8 md:text-center">
           <img src={CaseStudyProcess} alt="Login or Register: 1. Open website in her phone. 2. Logs in with her employee credentials. Catalog Search: 3. Scrolls through the page. 4. Selects a catgory. 5. Selects all devices that she needs. 6. Adds devices to her cart. Cart: 7. Reviews the items from her cart. 8. Remove any items that she doesn't need. 9. Proceed to checkout. Checkout: 10. Inputs her contact information. 11. Picks up a date and dropoff of the devices. 12. Reviews the items that she chose. 13. Submits a request. " />
+          <Button id="ModalButton" className="ModalButton mt-8 mb-8" onClick={handleShowB}>
+            Enlarge Image
+          </Button>
+
+          <Modal show={showB} onHide={handleCloseB}>
+            <Modal.Header closeButton>
+              <Modal.Title>Case Study Process</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <img className="" src={CaseStudyProcess} alt="case study process" />
+            </Modal.Body>
+            <Modal.Footer>
+
+            </Modal.Footer>
+          </Modal>
         </div>
         <div className="md:hidden Carousel content flex flex-nowrap justify-between Carousel_recent--wrapper">
           <div className="mr-2 Carousel_recent w-10/12">

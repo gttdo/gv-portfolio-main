@@ -2,10 +2,41 @@
   margin-left: 10.9375%;
   margin-right: 10.9375%;
 
+  h1 {
+    color: #333;
+    font-size: 4rem;
+    font-family: 'Maven Pro', 'Roboto', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 56.25px;
+    width: 100%;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+  }
+
+  span.highlight {
+    color: #FF3D4F;
+    font-size: 1rem;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 25px;
+    width: 100%;
+  }
+
+  p, li {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 25px;
+    width: 100%;
+    color: #333;
+  }
+
 }
 @media only screen and (min-width: 769px) {
   .AboutScreen {
-    height: 76.2vh;
     
     &_profile--wrapper {
       width: 150%;

@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 import BuiltIn from '../../../../core-ui/BuiltIn/BuiltIn';
 
@@ -8,9 +10,13 @@ import HMImg03 from '../../../../../assets/works/AMT/catalog_heatmap.jpg';
 import HMImg04 from '../../../../../assets/works/AMT/category_heatmap.jpg';
 
 import UsabilityScores from '../../../../../assets/works/AMT/usability_test_graph.svg';
-import UserFeedback from '../../../../../assets/works/AMT/user_feedback.svg';
+import UserFeedback from '../../../../../assets/works/AMT/user_feedback1@4x.png';
 
 const Deliver = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <div className="story_01 mb-12">
@@ -63,7 +69,7 @@ const Deliver = () => {
         </picture>
       </div>
 
-      <div className="story_4">
+      <div className="story_4 text-center">
         <BuiltIn
           subHeaderContent="User Comments"
           subHeaderClass="mb-4" />
@@ -75,6 +81,21 @@ const Deliver = () => {
           />
           <img className="mb-12" src={UserFeedback} alt="user comments" />
         </picture>
+        <Button id="ModalButton" className="ModalButton mt-8 mb-8" onClick={handleShow}>
+          View Feedback
+        </Button>
+
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>User Feedback</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <img className="" src={UserFeedback} alt="user feedback" />
+          </Modal.Body>
+          <Modal.Footer>
+
+          </Modal.Footer>
+        </Modal>
       </div>
     </>
   )

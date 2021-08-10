@@ -99,7 +99,7 @@ const CaseStudyAMTContent = () => {
           <div className="iframe_container">
             <img src={CatalogImg} alt="catalog" />
             <Button id="ModalButton" className="ModalButton mt-8" onClick={handleShow}>
-              View Prototype
+              Open Prototype
             </Button>
 
             <Modal show={show} onHide={handleClose}>
@@ -111,9 +111,6 @@ const CaseStudyAMTContent = () => {
               </Modal.Body>
               <Modal.Footer>
 
-                <Button id="ModalButton" className="ModalButton" onClick={handleClose}>
-                  Close Modal
-                </Button>
               </Modal.Footer>
             </Modal>
           </div>

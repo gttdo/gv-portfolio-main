@@ -48,7 +48,7 @@ const ContactScreen = () => {
               <textarea className="ContactScreen_input w-full block mt-4" type="text" id="input-message" name="formMessage" />
             </div>
             <div className="text-center md:text-left">
-              <FixedButton variant="red" textContent="SEND" />
+              <FixedButton addClass="regular-width md:regular-width" variant="red" textContent="SEND" />
             </div>
           </form>
         </div>

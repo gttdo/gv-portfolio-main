@@ -14,6 +14,13 @@ body {
 a {
   color: inherit; }
 
+.modal-dialog {
+  max-width: 98% !important; }
+
+@media only screen and (max-width: 767px) {
+  .modal {
+    top: 8% !important; } }
+
 .Navigation {
   height: 3.4375rem;
   width: 100%;
@@ -157,7 +164,7 @@ a {
   height: 5rem;
   width: 10rem; }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 420px) {
   .navigation__button {
     right: 7%; }
   .navigation__background {
@@ -181,10 +188,15 @@ a {
     font-family: 'Maven Pro';
     font-weight: 800;
     position: absolute;
-    top: 28%;
-    left: 14%;
+    top: -14%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #333333;
-    font-size: 2rem; }
+    font-size: 2.5vw; }
 
 @media only screen and (min-width: 769px) {
   .md\:flex-row {
@@ -202,6 +214,8 @@ a {
     .HomeScreen .cta-content {
       width: 84%;
       margin: auto; }
+    .HomeScreen .coming-soon-flag {
+      font-size: 2.5rem; }
     .HomeScreen_recent--wrapper {
       overflow-x: auto; }
     .HomeScreen_recent {
@@ -220,12 +234,36 @@ a {
 .AboutScreen {
   margin-left: 10.9375%;
   margin-right: 10.9375%; }
+  .AboutScreen h1 {
+    color: #333;
+    font-size: 4rem;
+    font-family: 'Maven Pro', 'Roboto', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 56.25px;
+    width: 100%;
+    letter-spacing: -3px;
+    text-transform: uppercase; }
+  .AboutScreen span.highlight {
+    color: #FF3D4F;
+    font-size: 1rem;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 25px;
+    width: 100%; }
+  .AboutScreen p, .AboutScreen li {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 25px;
+    width: 100%;
+    color: #333; }
 
 @media only screen and (min-width: 769px) {
-  .AboutScreen {
-    height: 76.2vh; }
-    .AboutScreen_profile--wrapper {
-      width: 150%; } }
+  .AboutScreen_profile--wrapper {
+    width: 150%; } }
 
 @media only screen and (max-width: 768px) {
   .AboutScreen .cta-content {
@@ -514,7 +552,6 @@ footer {
 .FixedButton,
 #ModalButton.ModalButton {
   height: 3.125rem;
-  width: 10.6875rem;
   border-radius: 5px;
   line-height: 16.41px;
   font-size: 1rem;
@@ -534,6 +571,12 @@ footer {
   #ModalButton.ModalButton:active {
     box-shadow: 0 0 0 rgba(51, 51, 51, 0.5); }
 
+.md\:regular-width {
+  width: 10.6875rem; }
+
+.md\:full-width {
+  width: 100%; }
+
 #ModalButton.ModalButton,
 .red {
   background-color: #FF3D4F;
@@ -547,10 +590,15 @@ footer {
   background-color: transparent;
   color: #fff; }
 
+@media only screen and (max-width: 767px) {
+  .regular-width {
+    width: 9.6875rem; }
+  .full-width {
+    width: 100%; } }
+
 @media only screen and (max-width: 375px) {
   .FixedButton,
   #ModalButton.ModalButton {
-    width: 9.6875rem;
     font-size: 0.85rem; } }
 
 .BuiltIn h4 {
