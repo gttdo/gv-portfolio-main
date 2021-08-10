@@ -37,6 +37,29 @@
     color: #333333;
     font-size: 2.5vw;
   }
+
+  h1 {
+    color: #333;
+    font-size: 4rem;
+    font-family: 'Maven Pro', 'Roboto', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 56.25px;
+    width: 100%;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+  }
+
+  span {
+    text-transform: uppercase;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 16.41px;
+    font-style: normal;
+    width: 12vw;
+  }
 }
 
 @media only screen and (min-width: 769px) {
@@ -75,6 +98,10 @@
 
     &_recent {
       flex: 0 0 auto;
+    }
+
+    span {
+      width: 100%;
     }
 
   }

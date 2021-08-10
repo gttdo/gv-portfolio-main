@@ -9,7 +9,7 @@
   font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  border: 1px solid #ff3d4f;
+  
   letter-spacing: 1.3;
   text-transform: uppercase;
   
@@ -42,16 +42,26 @@
 .red {
   background-color: #FF3D4F;
   color: #fff;
+  border: 1px solid #ff3d4f;
 }
 
 .inverse {
   color: #ff3d4f;
   background-color: #fff;
+  border: 1px solid #ff3d4f;
 }
 
 .white {
   background-color: transparent;
   color: #fff;
+  border: 1px solid #ff3d4f;
+}
+
+.gray {
+  background-color: #999999;
+  color: #eeeeee;
+  border: 1px solid #999999;
+  opacity: .5;
 }
 
 @media only screen and (max-width: 767px) {

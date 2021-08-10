@@ -199,6 +199,25 @@ a {
     align-items: center;
     color: #333333;
     font-size: 2.5vw; }
+  .HomeScreen h1 {
+    color: #333;
+    font-size: 4rem;
+    font-family: 'Maven Pro', 'Roboto', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 56.25px;
+    width: 100%;
+    letter-spacing: -3px;
+    text-transform: uppercase; }
+  .HomeScreen span {
+    text-transform: uppercase;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 16.41px;
+    font-style: normal;
+    width: 12vw; }
 
 @media only screen and (min-width: 769px) {
   .md\:flex-row {
@@ -221,7 +240,9 @@ a {
     .HomeScreen_recent--wrapper {
       overflow-x: auto; }
     .HomeScreen_recent {
-      flex: 0 0 auto; } }
+      flex: 0 0 auto; }
+    .HomeScreen span {
+      width: 100%; } }
 
 @media only screen and (min-width: 1557px) {
   .HomeScreen {
@@ -559,7 +580,6 @@ footer {
   font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  border: 1px solid #ff3d4f;
   letter-spacing: 1.3;
   text-transform: uppercase;
   box-shadow: 0 0 8px rgba(51, 51, 51, 0.15);
@@ -582,15 +602,24 @@ footer {
 #ModalButton.ModalButton,
 .red {
   background-color: #FF3D4F;
-  color: #fff; }
+  color: #fff;
+  border: 1px solid #ff3d4f; }
 
 .inverse {
   color: #ff3d4f;
-  background-color: #fff; }
+  background-color: #fff;
+  border: 1px solid #ff3d4f; }
 
 .white {
   background-color: transparent;
-  color: #fff; }
+  color: #fff;
+  border: 1px solid #ff3d4f; }
+
+.gray {
+  background-color: #999999;
+  color: #eeeeee;
+  border: 1px solid #999999;
+  opacity: .5; }
 
 @media only screen and (max-width: 767px) {
   .regular-width {

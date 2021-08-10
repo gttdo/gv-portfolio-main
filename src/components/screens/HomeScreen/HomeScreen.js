@@ -63,7 +63,10 @@ const HomeScreen = () => {
 
 
       <div className="story_03">
-        <ContentModule addClass="mb-9" headerContent="Projects" />
+        <div className="flex md:flex-row flex-col mb-16 md:items-center">
+          <h1 className="mb-7">Projects</h1>
+          <div className="w-full md:w-1/6"><Link className="hover:underline" to="/works"><span>View All ></span></Link></div>
+        </div>
         <div className="content flex flex-nowrap justify-between HomeScreen_recent--wrapper">
           <div className="md:mr-4 HomeScreen_recent md:mb-8 md:relative">
             <Link to="/works/case-study-amt">
@@ -71,22 +74,28 @@ const HomeScreen = () => {
               <p className="mt-8 text-center text-xl font-medium">Asset Management Tool</p>
               <p className="text-center text-xl">An inventory management tool</p>
             </Link>
+            <div className="story_03--link-wrapper">
+              <FixedButtonLink addClass="full-width md:regular-width md:mt-7" textContent="VIEW" variant="red" linkTo="/works/case-study-amt" />
+            </div>
           </div>
           <div className="md:mx-4 HomeScreen_recent relative">
             <img className="md:m-auto md:w-full opacity-30" src={Thumb02} alt="mobile app: bus up application" />
             <p className="mt-8 text-center text-xl font-medium opacity-30">Bus Up</p>
             <p className="text-center text-xl opacity-30">Commuter app for schedules, routes and stops.</p>
             <div className="coming-soon-flag">COMING SOON</div>
+            <div className="story_03--link-wrapper">
+              <FixedButtonLink disabled addClass="full-width md:regular-width" textContent="VIEW" variant="gray" linkTo="/works" />
+            </div>
           </div>
           <div className="md:ml-4 HomeScreen_recent relative">
             <img className="md:m-auto md:w-full opacity-30" src={Thumb03} alt="mobile app: localeyez. Comming Soon." />
             <p className="mt-8 text-center text-xl font-medium opacity-30">LocalEyez</p>
             <p className="text-center text-xl opacity-30">An event planner application.</p>
             <div className="coming-soon-flag">COMING SOON</div>
+            <div className="story_03--link-wrapper">
+              <FixedButtonLink disabled addClass="full-width md:regular-width md:mt-7" textContent="VIEW" variant="gray" linkTo="/works" />
+            </div>
           </div>
-        </div>
-        <div className="story_03--link-wrapper">
-          <FixedButtonLink addClass="full-width md:regular-width" textContent="VIEW ALL" variant="red" linkTo="/works" />
         </div>
       </div>
 
