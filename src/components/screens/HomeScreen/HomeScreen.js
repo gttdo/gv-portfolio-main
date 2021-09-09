@@ -65,7 +65,7 @@ const HomeScreen = () => {
       <div className="story_03">
         <div className="flex md:flex-row flex-col mb-16 md:items-center">
           <h1 className="mb-7">Projects</h1>
-          <div className="w-full md:w-1/6"><Link className="hover:underline" to="/works"><span>View All `&gt;`</span></Link></div>
+          <div className="w-full md:w-1/6"><Link className="hover:underline" to="/works"><span>View All &gt;</span></Link></div>
         </div>
         <div className="content flex flex-nowrap justify-between HomeScreen_recent--wrapper">
           <div className="md:mr-4 HomeScreen_recent md:mb-8 md:relative">
