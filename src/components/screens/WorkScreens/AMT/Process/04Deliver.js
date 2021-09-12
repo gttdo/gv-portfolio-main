@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import React from 'react';
+
 
 import BuiltIn from '../../../../core-ui/BuiltIn/BuiltIn';
 
@@ -9,14 +8,10 @@ import HMImg02 from '../../../../../assets/works/AMT/product_screen_heatmap.jpg'
 import HMImg03 from '../../../../../assets/works/AMT/catalog_heatmap.jpg';
 import HMImg04 from '../../../../../assets/works/AMT/category_heatmap.jpg';
 
-import UsabilityScores from '../../../../../assets/works/AMT/usability_test_graph.svg';
-import UserFeedback from '../../../../../assets/works/AMT/user_feedback1@4x.png';
+import UsabilityScores from '../../../../../assets/091021/case_study_amt/usability_testing/usability_scores.png';
+import UserFeedback from '../../../../../assets/091021/case_study_amt/usability_testing/user_feedback.png';
 
 const Deliver = () => {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   return (
     <>
       <div className="story_01 mb-12">
@@ -63,7 +58,7 @@ const Deliver = () => {
         <picture>
           <source
             media="(max-width: 767px)"
-            srcset={UsabilityScores}
+            srcSet={UsabilityScores}
           />
           <img className="mb-12" src={UsabilityScores} alt="usability scores" />
         </picture>
@@ -77,25 +72,11 @@ const Deliver = () => {
         <picture>
           <source
             media="(max-width: 767px)"
-            srcset={UserFeedback}
+            srcSet={UserFeedback}
           />
           <img className="mb-12" src={UserFeedback} alt="user comments" />
         </picture>
-        <Button id="ModalButton" className="ModalButton mt-8 mb-8" onClick={handleShow}>
-          View Feedback
-        </Button>
 
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>User Feedback</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <img className="" src={UserFeedback} alt="user feedback" />
-          </Modal.Body>
-          <Modal.Footer>
-
-          </Modal.Footer>
-        </Modal>
       </div>
     </>
   )

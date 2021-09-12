@@ -1,7 +1,27 @@
 
-.WorksScreen,
-.CaseStudyAMT,
-.CaseStudyBusUp {
+.CaseStudy {
+ a > button.FixedButton {
+   display: none;
+ }
+
+ .nav-pills  {
+
+    .nav-link{
+      border-radius: 0!important;
+      text-align: center;
+    }
+}
+
+.nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    border-radius: 0!important;
+  }
+
+}
+
+
+
+.CaseStudy_content {
   margin-left: 10.9375%;
   margin-right: 10.9375%;
 
@@ -42,6 +62,30 @@ ul.story_04_list {
   ul.story_04_list {
     min-height: 20rem;
   }
+
+  .nav-pills  {
+    .nav-link{
+      border-radius: 0!important;
+      text-align: center;
+    }
+  }
+
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    border-radius: 0!important;
+  }
+
+
+  .accordion-item {
+    &:first-of-type {
+      border-radius: 0 !important;
+      .accordion-button {
+        border-radius: 0!important;
+      }
+    }
+  }
+
+  
 
 
 }
@@ -87,6 +131,10 @@ ul.story_04_list {
 }
 
 @media only screen and (max-width: 768px) {
+  .CaseStudy_content {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
   .Carousel {
     margin-left: 0%;
     margin-right: 0%;
@@ -129,7 +177,7 @@ ul.story_04_list {
 }
 
 .nav-link:hover {
-  color: #e5e5e5;
+  color: #333;
 }
 
 .nav-pills .nav-link.active,

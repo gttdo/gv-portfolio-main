@@ -1,25 +1,31 @@
 import React from 'react';
+import './styles.scss';
 
-import HeaderContentModule from '../../../core-ui/ContentModule/HeaderContentModule';
+import FeaturedStory from '../../../core-ui/FeaturedProjects/FeaturedStory';
+import AMT from '../../../../assets/091021/project_card_bg/amt_card_bg.png';
+import AMTMobile from '../../../../assets/091021/project_card_bg/amt_card_bg_mobile.png';
 
-import AMTImg from '../../../../assets/works/AMT/casestudy_amt.png';
+
 
 import TabContainer from './TabContainer';
 
 
 const CaseStudyAMT = () => {
   return (
-    <div className="CaseStudyAMT">
-      <div className="flex flex-col-reverse mb-12 mt-12 md:flex-row">
-        <HeaderContentModule
-          addClass="md:w-2/4 md:mr-20"
-          headerContent="The Asset Management Tool"
-          headerTwoContent="An effective way for businesses to manage their inventory and provide to employees a quick access to it." />
-        <div className="CaseStudyAMTContent_image-wrapper mb-12">
-          <img src={AMTImg} alt="asset management tool" />
-        </div>
+    <div className="CaseStudy">
+      <FeaturedStory
+        bgImage={AMT}
+        mobileBgImage={AMTMobile}
+        alt="asset management app"
+        headline="Asset Management Tool"
+        headlineMobile="AMT"
+        paragraphContent="A mobile design solution for an inventory management application for enterprise level organizations."
+        caseStudyLink="/works/case-study-amt" />
+      <div className="CaseStudy_content">
+        <TabContainer />
       </div>
-      <TabContainer />
+
+
     </div>
   )
 }

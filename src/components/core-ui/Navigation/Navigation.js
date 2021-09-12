@@ -1,30 +1,50 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { Dropdown } from 'react-bootstrap';
 
-import Logo from '../../../assets/logo.jpg';
+import Logo from '../../../assets/091021/logo/davinces_design_logo.svg';
 
 
 const Navigation = () => {
+
+  function handleClose(evt) {
+    evt.preventDefault();
+
+    if (document.querySelector('.navigation__checkbox').checked === true) {
+      document.querySelector('.navigation__checkbox').checked = false;
+    } else {
+      document.querySelector('.navigation__checkbox').checked = true;
+    }
+
+  }
+
 
   return (
     <div className="Navigation relative">
       <nav className="hidden md:inline-block items-center h-full md:flex relative">
         <Link to="/" className="flex items-center">
-          <img className="logo rounded-full mr-4" src={Logo} alt="Home" />
-          GERARDO VINCES
+          <img className="logo mr-4" src={Logo} alt="Gerardo Vinces" />
         </Link>
-        <div className="flex-1">
+        <div className="hidden md:block md:flex-1">
           <ul className="flex justify-center items-center">
             <li className="">
               <NavLink className="Navigation_link" activeClassName="isNavActive" to="/about">
                 About
               </NavLink>
             </li>
-            <li className="p-12">
-              <NavLink className="Navigation_link" activeClassName="isNavActive" to="/works">
+            <Dropdown>
+              <Dropdown.Toggle className="Navigation_link" id="dropdown-basic">
                 Works
-              </NavLink>
-            </li>
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <NavLink className="Navigation_link" to="/magi">Magi</NavLink>
+                <NavLink className="Navigation_link" to="/localeyez">LocalEyez</NavLink>
+                <NavLink className="Navigation_link" to="/amt">Asset Management Tool</NavLink>
+                <NavLink className="Navigation_link" to="/busup">Bus App</NavLink>
+
+              </Dropdown.Menu>
+            </Dropdown>
             <li className="">
               <NavLink className="Navigation_link" activeClassName="isNavActive" to="/contact">
                 Contact
@@ -32,7 +52,7 @@ const Navigation = () => {
             </li>
           </ul>
         </div>
-        <div className="flex">
+        <div className="hidden md:block md:flex">
           <ul className="flex justify-center items-center">
             <li><a target="_blank" rel="noopener noreferrer" aria-label="linkedin" href="https://www.linkedin.com/in/gvinces/"><i className="fab fa-linkedin-in"></i></a></li>
             <li className="p-12"><a target="_blank" rel="noopener noreferrer" aria-label="instagram" href="https://www.instagram.com/a.traveler.journal"><i className="fab fa-instagram"></i></a></li>
@@ -42,6 +62,9 @@ const Navigation = () => {
       </nav>
 
       <div className="Navigation md:hidden">
+        <Link to="/" className="flex items-center">
+          <img className="logo mr-4" src={Logo} alt="Gerardo Vinces" />
+        </Link>
         <input
           type="checkbox"
           id="navi-toggle"
@@ -55,22 +78,37 @@ const Navigation = () => {
         <div id="navBG" className="navigation__background">&nbsp;</div>
         <nav className="navigation__nav">
           <ul className="navigation__list">
-            <li htmlFor="navi-toggle" className="navigation__item">
+            <li htmlFor="navi-toggle" className="navigation__item" onClick={handleClose}>
               <Link to="/" className="navigation__link nav_close">
                 Home
               </Link>
             </li>
-            <li htmlFor="navi-toggle" className="navigation__item">
+            <li htmlFor="navi-toggle" className="navigation__item" onClick={handleClose}>
               <Link to="/about" className="navigation__link nav_close">
                 About
               </Link>
             </li>
-            <li className="navigation__item">
-              <Link to="/works" className="navigation__link">
-                Works
+            <li className="navigation__item" onClick={handleClose}>
+              <Link to="/magi" className="navigation__link smaller">
+                Magi
               </Link>
             </li>
-            <li className="navigation__item">
+            <li className="navigation__item" onClick={handleClose}>
+              <Link to="/localeyez" className="navigation__link smaller">
+                Localeyez
+              </Link>
+            </li>
+            <li className="navigation__item" onClick={handleClose}>
+              <Link to="/amt" className="navigation__link smaller">
+                AMT
+              </Link>
+            </li>
+            <li className="navigation__item" onClick={handleClose}>
+              <Link to="/busup" className="navigation__link smaller">
+                BusUp
+              </Link>
+            </li>
+            <li className="navigation__item" onClick={handleClose}>
               <Link to="/contact" className="navigation__link">
                 Contact
               </Link>

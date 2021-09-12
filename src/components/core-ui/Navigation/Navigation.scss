@@ -11,6 +11,10 @@
   padding-right: 11.9375%;
   margin-bottom: 5.3125rem;
 
+  &_link {
+    padding: 0.375rem 0;
+  }
+
   .logo {
     width: auto;
     height: auto;
@@ -21,10 +25,55 @@
     top: 17%;
   }
 
-  a{
-    color: inherit!important;
+  .nav-link:hover {
+    color: #333;
+  }
+
+  a,
+  button,
+  button:hover,
+  button:active,
+  button:focus,
+  .show>.btn-primary.dropdown-toggle,
+  .btn-primary:focus{
+    color: inherit;
     border-bottom: 1px solid #333;
-    padding-bottom: 5px;
+    background: transparent;
+    text-transform: uppercase;
+    box-shadow: none;
+    border: none;
+    display: block;
+  }
+  
+
+  .btn {
+    padding: 0 4rem 0;
+  }
+
+  .dropdown-menu {
+    min-width: 16rem;
+  }
+
+  .dropdown-menu > a {
+    padding: 0.375rem;
+  }
+
+
+  .dropdown-menu > a:hover,
+  .dropdown-menu > a:focus{
+    background-color: #333;
+    color: #FFF;
+    border-bottom: transparent;
+  }
+
+
+
+  .dropdown-menu {
+    border-radius: 0;
+  }
+
+  &_link {
+    border-bottom: 1px solid transparent;
   }
 
   .isNavActive,
@@ -37,7 +86,12 @@
 
 @media only screen and (max-width: 768px) {
   .Navigation {
-    margin-bottom: 3rem;
+    padding: 0;
+    margin: 0;
+
+    a:first-child {
+      padding: 2% 0 0 5%;
+    }
   }
 
   
@@ -113,7 +167,7 @@
   &__item {
     margin: 1rem;
   }
-
+  
   &__link {
     &:link,
     &:visited {
@@ -146,6 +200,10 @@
       color: #333333!important;
       transform: translateX(1rem);
     }
+  }
+
+  &__link.smaller {
+    font-size: 2.5rem;
   }
 
   //FUNCTIONALITY
@@ -223,7 +281,7 @@
   width: 10rem;
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 430px) {
 .navigation {
   &__button {
     right: 7%;
