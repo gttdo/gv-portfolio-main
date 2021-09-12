@@ -2,7 +2,7 @@ import React from 'react';
 
 import BuiltIn from '../../../../core-ui/BuiltIn/BuiltIn';
 
-import StyleGuide from '../../../../../assets/works/AMT/style_guide.jpg';
+import StyleGuide from '../../../../../assets/091021/case_study_amt/style_guide/style_guide.jpg';
 
 const Develop = () => {
   return (
@@ -15,7 +15,7 @@ const Develop = () => {
         <picture>
           <source
             media="(max-width: 767px)"
-            srcset={StyleGuide}
+            srcSet={StyleGuide}
           />
           <img className="mb-12" src={StyleGuide} alt="stye guide" />
         </picture>

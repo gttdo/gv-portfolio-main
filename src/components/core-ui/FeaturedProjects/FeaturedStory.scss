@@ -1,0 +1,79 @@
+.FeaturedStory {
+    font-family: 'Montserrat', 'Helvetica';
+    margin-bottom: 3rem;
+    &_header {
+        font-weight: 700;
+        font-style: normal;
+        font-size: 48px;
+        line-height: 58.51px;
+        letter-spacing: 3.5px;
+        color: #FFF;
+        border-bottom: 2px solid #FFF;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        width: fit-content;
+
+        
+    }
+
+    &_headerMobile{
+        display: none;
+    }
+
+    &_paragraph {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26.82px;
+        color: #FFF;
+        margin-bottom: 2rem;
+    }
+
+    .content-overlay {
+        position: absolute;
+        top: 17%;
+        left: 12%;
+        width: 40%;
+
+        button {
+            width: 10.6875rem;
+        }
+    }
+
+
+
+    
+}
+
+@media only screen and (max-width: 769px) {
+   .FeaturedStory {
+    &_headerMobile {
+        display: block;
+        font-size: 20px;
+        line-height: 24.51px;
+        padding-bottom: 0.5rem;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: 3.5px;
+        color: #FFF;
+        border-bottom: 2px solid #FFF;
+        margin-bottom: 2rem;
+        width: fit-content;
+    }
+    &_header,
+    &_paragraph {
+        display: none;
+    }
+
+    .content-overlay {
+        top: 17%;
+        left: 6%;
+        width: 40%;
+
+        button {
+            font-size: 0.75rem;
+            height: 2.5rem;
+            width: 7rem;
+        }
+    }
+   }
+}

@@ -8,6 +8,9 @@
   padding: 0;
   box-sizing: inherit; }
 
+.row > * {
+  margin: 0 !important; }
+
 body {
   box-sizing: border-box; }
 
@@ -34,23 +37,55 @@ a {
   padding-left: 11.9375%;
   padding-right: 11.9375%;
   margin-bottom: 5.3125rem; }
+  .Navigation_link {
+    padding: 0.375rem 0; }
   .Navigation .logo {
     width: auto;
     height: auto; }
   .Navigation-mobile {
     right: 0;
     top: 17%; }
-  .Navigation a {
-    color: inherit !important;
+  .Navigation .nav-link:hover {
+    color: #333; }
+  .Navigation a,
+  .Navigation button,
+  .Navigation button:hover,
+  .Navigation button:active,
+  .Navigation button:focus,
+  .Navigation .show > .btn-primary.dropdown-toggle,
+  .Navigation .btn-primary:focus {
+    color: inherit;
     border-bottom: 1px solid #333;
-    padding-bottom: 5px; }
+    background: transparent;
+    text-transform: uppercase;
+    box-shadow: none;
+    border: none;
+    display: block; }
+  .Navigation .btn {
+    padding: 0 4rem 0; }
+  .Navigation .dropdown-menu {
+    min-width: 16rem; }
+  .Navigation .dropdown-menu > a {
+    padding: 0.375rem; }
+  .Navigation .dropdown-menu > a:hover,
+  .Navigation .dropdown-menu > a:focus {
+    background-color: #333;
+    color: #FFF;
+    border-bottom: transparent; }
+  .Navigation .dropdown-menu {
+    border-radius: 0; }
+  .Navigation_link {
+    border-bottom: 1px solid transparent; }
   .Navigation .isNavActive, .Navigation_link:hover {
     border-bottom: 1px solid #fffffe;
     padding-bottom: 5px; }
 
 @media only screen and (max-width: 768px) {
   .Navigation {
-    margin-bottom: 3rem; } }
+    padding: 0;
+    margin: 0; }
+    .Navigation a:first-child {
+      padding: 2% 0 0 5%; } }
 
 @media only screen and (min-width: 1557px) {
   .Navigation {
@@ -123,6 +158,8 @@ a {
     background-position: 100%;
     color: #333333 !important;
     transform: translateX(1rem); }
+  .navigation__link.smaller {
+    font-size: 2.5rem; }
   .navigation__checkbox:checked ~ .navigation__background {
     transform: scale(80); }
   .navigation__checkbox:checked ~ .navigation__nav {
@@ -166,58 +203,80 @@ a {
   height: 5rem;
   width: 10rem; }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 430px) {
   .navigation__button {
     right: 7%; }
   .navigation__background {
     right: 7%; } }
 
-.HomeScreen {
+.HomeScreen .DetailedContentModule {
+  margin-top: 5rem; }
+
+.HomeScreen .story_01,
+.HomeScreen .story_02,
+.HomeScreen .story_02-5 {
   margin-left: 10.9375%;
   margin-right: 10.9375%; }
-  .HomeScreen .cta-content {
-    width: 84%; }
-  .HomeScreen_spotlight--wrapper {
-    border-radius: 30px;
-    margin-left: auto;
-    width: 90%; }
-  .HomeScreen .story_03--link-wrapper {
-    margin: 2.25rem auto;
-    text-align: center; }
-  .HomeScreen .story_04 iframe#iframe {
-    margin: auto; }
-  .HomeScreen .coming-soon-flag {
-    font-family: 'Maven Pro';
-    font-weight: 800;
-    position: absolute;
-    top: -14%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #333333;
-    font-size: 2.5vw; }
-  .HomeScreen h1 {
-    color: #333;
-    font-size: 4rem;
-    font-family: 'Maven Pro', 'Roboto', sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    line-height: 56.25px;
-    width: 100%;
-    letter-spacing: -3px;
-    text-transform: uppercase; }
-  .HomeScreen span {
-    text-transform: uppercase;
-    color: #333;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 16.41px;
-    font-style: normal;
-    width: 12vw; }
+
+.HomeScreen .cta-content {
+  width: 84%; }
+
+.HomeScreen_spotlight--wrapper {
+  margin-left: auto;
+  width: 100%; }
+
+.HomeScreen .story_03--link-wrapper {
+  margin: 2.25rem auto;
+  text-align: center; }
+
+.HomeScreen .story_04 iframe#iframe {
+  margin: auto; }
+
+.HomeScreen .coming-soon-flag {
+  font-family: 'Maven Pro';
+  font-weight: 800;
+  position: absolute;
+  top: -14%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333333;
+  font-size: 2.5vw; }
+
+.HomeScreen h1 {
+  color: #333;
+  font-size: 4rem;
+  font-family: 'Maven Pro', 'Roboto', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 56.25px;
+  width: 100%;
+  letter-spacing: -3px;
+  text-transform: uppercase; }
+
+.HomeScreen h2.story_headers {
+  color: #333;
+  font-size: 3rem;
+  font-family: 'Maven Pro', 'Roboto', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 56.25px;
+  width: 100%;
+  letter-spacing: -3px;
+  text-transform: uppercase; }
+
+.HomeScreen span {
+  text-transform: uppercase;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 16.41px;
+  font-style: normal;
+  width: 12vw; }
 
 @media only screen and (min-width: 769px) {
   .md\:flex-row {
@@ -245,7 +304,9 @@ a {
       width: 100%; } }
 
 @media only screen and (min-width: 1557px) {
-  .HomeScreen {
+  .HomeScreen .story_01,
+  .HomeScreen .story_02,
+  .HomeScreen .story_02-5 {
     margin-left: 20%;
     margin-right: 20%; } }
 
@@ -256,7 +317,8 @@ a {
 
 .AboutScreen {
   margin-left: 10.9375%;
-  margin-right: 10.9375%; }
+  margin-right: 10.9375%;
+  margin-top: 7%; }
   .AboutScreen h1 {
     color: #333;
     font-size: 4rem;
@@ -299,16 +361,21 @@ a {
     margin-left: 20%;
     margin-right: 20%; } }
 
-.WorksScreen,
-.CaseStudyAMT,
-.CaseStudyBusUp {
+.CaseStudy a > button.FixedButton {
+  display: none; }
+
+.CaseStudy .nav-pills .nav-link {
+  border-radius: 0 !important;
+  text-align: center; }
+
+.CaseStudy .nav-pills .nav-link.active,
+.CaseStudy .nav-pills .show > .nav-link {
+  border-radius: 0 !important; }
+
+.CaseStudy_content {
   margin-left: 10.9375%;
   margin-right: 10.9375%; }
-  .WorksScreen p, .WorksScreen li,
-  .CaseStudyAMT p,
-  .CaseStudyAMT li,
-  .CaseStudyBusUp p,
-  .CaseStudyBusUp li {
+  .CaseStudy_content p, .CaseStudy_content li {
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -316,41 +383,33 @@ a {
     line-height: 25px;
     width: 100%;
     color: #333; }
-  .WorksScreen p.story_03_copy,
-  .CaseStudyAMT p.story_03_copy,
-  .CaseStudyBusUp p.story_03_copy {
+  .CaseStudy_content p.story_03_copy {
     background-color: #00A698; }
-  .WorksScreen p.story_03_copy,
-  .WorksScreen p.story_04_copy,
-  .CaseStudyAMT p.story_03_copy,
-  .CaseStudyAMT p.story_04_copy,
-  .CaseStudyBusUp p.story_03_copy,
-  .CaseStudyBusUp p.story_04_copy {
+  .CaseStudy_content p.story_03_copy,
+  .CaseStudy_content p.story_04_copy {
     text-align: center; }
-  .WorksScreen p.story_04_copy,
-  .WorksScreen ul.story_04_list,
-  .CaseStudyAMT p.story_04_copy,
-  .CaseStudyAMT ul.story_04_list,
-  .CaseStudyBusUp p.story_04_copy,
-  .CaseStudyBusUp ul.story_04_list {
+  .CaseStudy_content p.story_04_copy,
+  .CaseStudy_content ul.story_04_list {
     background-color: #F16432; }
-  .WorksScreen p.story_03_copy,
-  .WorksScreen p.story_04_copy,
-  .WorksScreen ul.story_04_list li,
-  .CaseStudyAMT p.story_03_copy,
-  .CaseStudyAMT p.story_04_copy,
-  .CaseStudyAMT ul.story_04_list li,
-  .CaseStudyBusUp p.story_03_copy,
-  .CaseStudyBusUp p.story_04_copy,
-  .CaseStudyBusUp ul.story_04_list li {
+  .CaseStudy_content p.story_03_copy,
+  .CaseStudy_content p.story_04_copy,
+  .CaseStudy_content ul.story_04_list li {
     color: #fff;
     font-weight: 600;
     font-size: 1.125rem;
     padding: 0.3rem 1.5rem; }
-  .WorksScreen ul.story_04_list,
-  .CaseStudyAMT ul.story_04_list,
-  .CaseStudyBusUp ul.story_04_list {
+  .CaseStudy_content ul.story_04_list {
     min-height: 20rem; }
+  .CaseStudy_content .nav-pills .nav-link {
+    border-radius: 0 !important;
+    text-align: center; }
+  .CaseStudy_content .nav-pills .nav-link.active,
+  .CaseStudy_content .nav-pills .show > .nav-link {
+    border-radius: 0 !important; }
+  .CaseStudy_content .accordion-item:first-of-type {
+    border-radius: 0 !important; }
+    .CaseStudy_content .accordion-item:first-of-type .accordion-button {
+      border-radius: 0 !important; }
 
 @media only screen and (min-width: 1557px) {
   .WorksScreen,
@@ -374,6 +433,9 @@ a {
         max-width: none; } }
 
 @media only screen and (max-width: 768px) {
+  .CaseStudy_content {
+    margin-left: 2%;
+    margin-right: 2%; }
   .Carousel {
     margin-left: 0%;
     margin-right: 0%; }
@@ -402,7 +464,7 @@ a {
   color: #333; }
 
 .nav-link:hover {
-  color: #e5e5e5; }
+  color: #333; }
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
@@ -457,7 +519,7 @@ footer {
 .HeaderContentModule h1,
 .LayeredContentModule h1 {
   color: #333;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: 'Maven Pro', 'Roboto', sans-serif;
   font-weight: 900;
   font-style: normal;
@@ -492,7 +554,7 @@ footer {
 .HeaderContentModule span.highlight,
 .LayeredContentModule span.highlight {
   color: #FF3D4F;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: 'Maven Pro', 'Roboto', sans-serif;
   font-weight: 800;
   font-style: normal;
@@ -645,10 +707,11 @@ footer {
 
 .BuiltIn h6 {
   font-weight: 900;
-  font-size: 1.1rem;
-  text-decoration: underline; }
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: 'Maven Pro', sans-serif; }
 
-.BuiltIn h4, .BuiltIn h6, .BuiltIn p, .BuiltIn li {
+.BuiltIn h4, .BuiltIn p, .BuiltIn li {
   color: #333;
   font-family: 'Montserrat', sans-serif; }
 

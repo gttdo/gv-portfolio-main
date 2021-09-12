@@ -1,15 +1,25 @@
 .HomeScreen {
-  margin-left: 10.9375%;
-  margin-right: 10.9375%;
+  // margin-left: 10.9375%;
+  // margin-right: 10.9375%;
+
+  .DetailedContentModule {
+    margin-top: 5rem;
+  }
+
+  .story_01,
+  .story_02,
+  .story_02-5 {
+    margin-left: 10.9375%;
+    margin-right: 10.9375%;
+  }
   
   .cta-content {
     width: 84%;
   }
 
   &_spotlight--wrapper {
-    border-radius: 30px;
     margin-left: auto;
-    width: 90%;
+    width:100%;
   }
 
   .story_03--link-wrapper {
@@ -41,6 +51,19 @@
   h1 {
     color: #333;
     font-size: 4rem;
+    font-family: 'Maven Pro', 'Roboto', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    line-height: 56.25px;
+    width: 100%;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+
+  }
+
+  h2.story_headers {
+    color: #333;
+    font-size: 3rem;
     font-family: 'Maven Pro', 'Roboto', sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -109,8 +132,13 @@
 
 @media only screen and (min-width: 1557px) {
   .HomeScreen {
-    margin-left: 20%;
-    margin-right: 20%;
+  
+    .story_01,
+    .story_02,
+    .story_02-5 {
+      margin-left: 20%;
+      margin-right: 20%;
+    }
   }
 }
 

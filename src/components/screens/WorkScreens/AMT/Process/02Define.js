@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import React from 'react';
 
 import BuiltIn from '../../../../core-ui/BuiltIn/BuiltIn';
 
-import UserFlow01 from '../../../../../assets/works/AMT/userflow@4x.png';
-import UserFlow02 from '../../../../../assets/works/AMT/userflow2@4x.png';
-import SiteMap from '../../../../../assets/works/AMT/sitemap@4x.png';
-import Sketch01 from '../../../../../assets/works/AMT/Sketch_01.jpg';
-import Sketch02 from '../../../../../assets/works/AMT/Sketch_02.jpg';
+import UserFlow01 from '../../../../../assets/091021/case_study_amt/user_flows/AMT_user_flow_1.png';
+import UserFlow02 from '../../../../../assets/091021/case_study_amt/user_flows/AMT_user_flow_2.png';
+import SiteMap from '../../../../../assets/091021/case_study_amt/site_map/AMT_site_map.png';
+import Sketch01 from '../../../../../assets/091021/case_study_amt/sketches/sketches.jpg';
+import Sketch02 from '../../../../../assets/091021/case_study_amt/story_board/storyboard.jpg';
 
 import WireFrame01 from '../../../../../assets/works/AMT/login_screen.jpg';
 import WireFrame02 from '../../../../../assets/works/AMT/catalog.jpg';
@@ -22,18 +20,7 @@ import WireFrame08 from '../../../../../assets/works/AMT/order_summary.jpg';
 
 
 const Define = () => {
-  const [showA, setShowA] = useState(false);
-  const [showB, setShowB] = useState(false);
-  const [showC, setShowC] = useState(false);
 
-  const handleCloseA = () => setShowA(false);
-  const handleShowA = () => setShowA(true);
-
-  const handleCloseB = () => setShowB(false);
-  const handleShowB = () => setShowB(true);
-
-  const handleCloseC = () => setShowC(false);
-  const handleShowC = () => setShowC(true);
 
   return (
     <>
@@ -42,56 +29,26 @@ const Define = () => {
           subHeaderContent="User Flows"
           subHeaderClass="mb-4" />
         <div className="story_04-1">
-          <h6 className="mb-4">User story 1: As a user, I want to pick an item and add it to my cart.</h6>
           <picture>
             <source
               media="(max-width: 767px)"
-              srcset={UserFlow01}
+              srcSet={UserFlow01}
             />
             <img className="mb-12" src={UserFlow01} alt="user flow 1" />
           </picture>
         </div>
-        <Button id="ModalButton" className="ModalButton mt-8 mb-8" onClick={handleShowA}>
-          Enlarge Image
-        </Button>
-
-        <Modal show={showA} onHide={handleCloseA}>
-          <Modal.Header closeButton>
-            <Modal.Title>User Flow #1</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <img className="" src={UserFlow01} alt="user flow 1" />
-          </Modal.Body>
-          <Modal.Footer>
-
-          </Modal.Footer>
-        </Modal>
 
 
         <div className="story_04-2">
-          <h6 className="mb-4">User story 2: As a user, I want to checkout and place a request.</h6>
           <picture>
             <source
               media="(max-width: 767px)"
-              srcset={UserFlow02}
+              srcSet={UserFlow02}
             />
             <img src={UserFlow02} alt="user flow 2" />
           </picture>
 
-          <Button id="ModalButton" className="ModalButton mt-8 mb-8" onClick={handleShowB}>
-            Enlarge Image
-          </Button>
 
-          <Modal show={showB} onHide={handleCloseB}>
-            <Modal.Header closeButton>
-              <Modal.Title>User Flow #1</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <img src={UserFlow02} alt="user flow 2" />
-            </Modal.Body>
-            <Modal.Footer>
-            </Modal.Footer>
-          </Modal>
         </div>
       </div>
 
@@ -102,26 +59,10 @@ const Define = () => {
         <picture>
           <source
             media="(max-width: 767px)"
-            srcset={SiteMap}
+            srcSet={SiteMap}
           />
           <img className="mb-12" src={SiteMap} alt="asset managment tool sitemap" />
         </picture>
-
-        <Button id="ModalButton" className="ModalButton mt-8 mb-8" onClick={handleShowC}>
-          Enlarge Image
-        </Button>
-
-        <Modal show={showC} onHide={handleCloseC}>
-          <Modal.Header closeButton>
-            <Modal.Title>Sitemap</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <img className="mb-12" src={SiteMap} alt="asset managment tool sitemap" />
-          </Modal.Body>
-          <Modal.Footer>
-
-          </Modal.Footer>
-        </Modal>
       </div>
 
       <div className="story_05 mb-4 md:mb-24">
@@ -133,7 +74,7 @@ const Define = () => {
             <picture>
               <source
                 media="(max-width: 767px)"
-                srcset={Sketch01}
+                srcSet={Sketch01}
               />
               <img className="mb-12" src={Sketch01} alt="sketch" />
             </picture>
@@ -146,7 +87,7 @@ const Define = () => {
             <picture>
               <source
                 media="(max-width: 767px)"
-                srcset={Sketch02}
+                srcSet={Sketch02}
               />
               <img className="mb-12" src={Sketch02} alt="storyboarding" />
             </picture>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, HashRouter, Switch, Route } from 'react-router-dom';
+import ScrollToTop from '../components/core-ui/ScrollToTop/ScrollToTop';
 
 
 import Navigation from './core-ui/Navigation/Navigation';
@@ -9,13 +10,17 @@ import WorksScreen from './screens/WorkScreens/WorksScreen';
 import ContactScreen from './screens/ContactScreen/ContactScreen';
 import Footer from './core-ui/Footer/Footer';
 import CaseStudyAMT from './screens/WorkScreens/AMT/index';
-import CaseStudyBusUp from './screens/WorkScreens/BusUp/CaseStudyBusUp';
+import CaseStudyMagi from './screens/WorkScreens/Magi/index';
+import CaseStudyBusUp from './screens/WorkScreens/BusUp/index';
+import CaseStudyLocalEyez from './screens/WorkScreens/LocalEyez/index';
 
 function App() {
   return (
-    <Router>
-      <div className="App relative">
+
+    <div className="App relative">
+      <Router>
         <Navigation />
+        <ScrollToTop />
         <Switch>
           <Route exact path="/">
             <HomeScreen />
@@ -23,22 +28,32 @@ function App() {
           <Route path="/about">
             <AboutScreen />
           </Route>
-          <Route exact path="/works">
-            <WorksScreen />
-          </Route>
-          <Route path="/works/case-study-amt">
+
+          <Route path="/amt">
             <CaseStudyAMT />
           </Route>
-          <Route path="/works/case-study-busup">
+          <Route path="/busup">
             <CaseStudyBusUp />
+          </Route>
+          <Route path="/magi">
+            <CaseStudyMagi />
+          </Route>
+          <Route path="/localeyez">
+            <CaseStudyLocalEyez />
           </Route>
           <Route path="/contact">
             <ContactScreen />
           </Route>
         </Switch>
         <Footer />
-      </div>
-    </Router>
+      </Router>
+      <HashRouter>
+        <Route exact path="/#featuredProjects">
+          <WorksScreen />
+        </Route>
+      </HashRouter>
+    </div>
+
   );
 }
 

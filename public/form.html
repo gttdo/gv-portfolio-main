@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <form name="contact"
+          netlify
+          netlify-honeypot="bot-field"
+          hidden>
+        <div className="u-margin-bottom-medium">
+            <h2 className="heading-secondary">Contact Us</h2>
+        </div>
+
+        <div className="form__group">
+            <input className="form__input"
+                   name="name"
+                   placeholder="Full name"
+                   type="text"
+                   required />
+            <label className="form__label">
+                Full name
+            </label>
+        </div>
+
+        <div className="form__group">
+            <input type="text"
+                   className="form__input"
+                   placeholder="Email address"
+                   required
+                   name="email" />
+            <label htmlFor="email"
+                   className="form__label">
+                Email address
+            </label>
+        </div>
+
+
+
+        <div className="form__group">
+            <label htmlFor="message">Message</label>
+            <textarea className="form_textarea"
+                      id="message"
+                      rows="3"
+                      name="message" />
+        </div>
+
+        <div className="form__group">
+            <button className="btn btn--orange btn--small"
+                    type="submit">Submit</button>
+        </div>
+
+    </form>
+</body>
+
+</html>
